@@ -21,7 +21,7 @@ class Users extends React.Component {
         (result) => {
           this.setState({
             isLoaded: true,
-            users: result.data
+            users: result
           });
         },
         // Note: it's important to handle errors here
