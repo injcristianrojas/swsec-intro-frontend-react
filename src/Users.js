@@ -55,7 +55,7 @@ class Users extends React.Component {
             {users.map(user => (
               <tr key={user.id}>
                 <td>
-                  {user.username}
+                  <a href={`/api/v1/users/name/${user.username}`}>{user.username}</a>
                 </td>
               </tr>
             ))}
