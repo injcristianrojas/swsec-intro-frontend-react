@@ -32,8 +32,9 @@ class Wall extends React.Component {
       }
     ).then(
       res => {
+        this.retrieveData();
         this.setState(
-          { messages: res.data.data, message: '' },
+          { message: '' },
           () => console.log(this.state)
         );
       }
@@ -46,8 +47,11 @@ class Wall extends React.Component {
     event.preventDefault();
   }
 
-
   componentDidMount() {
+    this.retrieveData();
+  }
+
+  retrieveData() {
     let token = getToken();
     fetch('http://127.0.0.1:9000/api/v2/messages', { method: "GET", headers: { "Authorization": `Bearer ${token}` } })
       .then(res => res.json())
