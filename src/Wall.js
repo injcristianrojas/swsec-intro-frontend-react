@@ -54,7 +54,7 @@ class Wall extends React.Component {
       .then(
         (result) => {
           this.setState({
-            messages: result.data
+            messages: result
           });
         },
         // Note: it's important to handle errors here
