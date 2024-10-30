@@ -23,7 +23,7 @@ class Wall extends React.Component {
   handleSubmit(event) {
     let token = getToken();
     axios.post(
-      'http://127.0.0.1:9000/api/v2/messages/new',
+      'http://127.0.0.1:9000/api/v2/messages/add',
       {
         'message': this.state.message
       },
