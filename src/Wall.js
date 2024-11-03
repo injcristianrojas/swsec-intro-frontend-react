@@ -80,7 +80,7 @@ class Wall extends React.Component {
       return (
         <div>
           <form onSubmit={this.handleSubmit}>
-            <input type="text" value={this.state.message} onChange={this.handleChange} />
+            <input type="text" value={this.state.message} onChange={this.handleChange} size="70" />
             <input type="submit" value="Postear" />
           </form>
           <table>
